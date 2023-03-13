@@ -35,7 +35,11 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
                 @include('layouts.breadcrumb')
-                @yield('content')
+                <div class="card">
+                    <div class="card-body">
+                        @yield('content')
+                    </div>
+                </div>
             </div>
 
 
