@@ -15,3 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [AuthController::class, 'loginpage'])->name('loginpage');
+
+Route::get('/dashboard-admin', function (){
+    return view('layouts.main');
+});
