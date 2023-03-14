@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [AuthController::class, 'loginpage'])->name('loginpage');
+Route::post('/postlogin', [AuthController::class, 'postlogin'])->name('postlogin');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/dashboard-admin', function (){
-    return view('admin.dashboard');
-});
+
+// Dashboard
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+
+
+// Route::get('/dashboard-admin', function (){
+//     return view('dashboard');
+// });

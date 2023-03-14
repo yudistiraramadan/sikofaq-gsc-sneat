@@ -26,7 +26,7 @@
         <div class="layout-page">
 
             <!-- Navbar -->
-                @include('layouts.navbar')
+            @include('layouts.navbar')
             <!-- / Navbar -->
 
           <!-- Content wrapper -->
@@ -34,9 +34,10 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-                @include('layouts.breadcrumb')
                 <div class="card">
                     <div class="card-body">
+                        {{-- @include('layouts.breadcrumb') --}}
+
                         @yield('content')
                     </div>
                 </div>
