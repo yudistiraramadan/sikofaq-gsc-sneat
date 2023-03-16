@@ -27,7 +27,9 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashb
 
 // Bendahara
 Route::get('/daftar-user', [UserController::class, 'user'])->name('user');
-
+Route::get('/tes', function(){
+    return view('tes');
+});
 
 // Route::get('/dashboard-admin', function (){
 //     return view('dashboard');

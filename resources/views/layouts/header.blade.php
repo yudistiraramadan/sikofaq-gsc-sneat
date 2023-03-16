@@ -1,13 +1,10 @@
 <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
+    <meta charset="utf-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
-    <title>Dashboard - Analytics | Sneat</title>
+    <title>{{ $title ?? 'SIKOFAQ-GSC' }}</title>
 
-    <meta name="description" content="" />
+    {{-- <meta name="description" content=""> --}}
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="sneat/assets/img/favicon/favicon.ico" />
@@ -41,4 +38,7 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="sneat/assets/js/config.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+
   </head>
