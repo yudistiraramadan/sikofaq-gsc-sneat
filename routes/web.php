@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,9 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Dashboard
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+
+// Bendahara
+Route::get('/daftar-user', [UserController::class, 'user'])->name('user');
 
 
 // Route::get('/dashboard-admin', function (){

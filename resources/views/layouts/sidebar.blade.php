@@ -69,7 +69,7 @@
     <ul class="menu-inner py-1">
       <!-- Dashboard -->
       <li class="menu-item active">
-        <a href="index.html" class="menu-link">
+        <a href="{{ route('dashboard') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Analytics">Dashboard</div>
         </a>
@@ -117,24 +117,29 @@
       <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-dock-top"></i>
-          <div data-i18n="Account Settings">Daftar User</div>
+          <div data-i18n="Account Settings">User</div>
         </a>
         <ul class="menu-sub">
           <li class="menu-item">
+            <a href="{{ route('user') }}" class="menu-link">
+              <div data-i18n="Account">Daftar User</div>
+            </a>
+          </li>
+          {{-- <li class="menu-item">
             <a href="pages-account-settings-account.html" class="menu-link">
-              <div data-i18n="Account">Account</div>
+              <div data-i18n="Account">Admin</div>
             </a>
           </li>
           <li class="menu-item">
             <a href="pages-account-settings-notifications.html" class="menu-link">
-              <div data-i18n="Notifications">Notifications</div>
+              <div data-i18n="Notifications">Petugas</div>
             </a>
           </li>
           <li class="menu-item">
             <a href="pages-account-settings-connections.html" class="menu-link">
-              <div data-i18n="Connections">Connections</div>
+              <div data-i18n="Connections">Bendahara</div>
             </a>
-          </li>
+          </li> --}}
         </ul>
       </li>
       <li class="menu-item">
