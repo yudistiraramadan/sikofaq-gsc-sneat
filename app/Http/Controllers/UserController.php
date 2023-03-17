@@ -15,4 +15,8 @@ class UserController extends Controller
 
         return view('user.daftar-user', compact('user'));
     }
+
+    public function create(){
+        return view('user.tambah-user');
+    }
 }

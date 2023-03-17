@@ -68,7 +68,7 @@
 
     <ul class="menu-inner py-1">
       <!-- Dashboard -->
-      <li class="menu-item active">
+      <li class="menu-item {{ Request::is('dashboard') ? 'active' : '' }}">
         <a href="{{ route('dashboard') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Analytics">Dashboard</div>
@@ -112,9 +112,9 @@
       </li>
 
       <li class="menu-header small text-uppercase">
-        <span class="menu-header-text">User</span>
+        <span class="menu-header-text">Daftar Pengguna</span>
       </li>
-      <li class="menu-item">
+      <li class="menu-item {{ Request::is('daftar-user') ? 'active' : '' }}">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-dock-top"></i>
           <div data-i18n="Account Settings">User</div>
@@ -122,7 +122,12 @@
         <ul class="menu-sub">
           <li class="menu-item">
             <a href="{{ route('user') }}" class="menu-link">
-              <div data-i18n="Account">Daftar User</div>
+              <div data-i18n="Account">User Sistem</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="{{ route('user') }}" class="menu-link">
+              <div data-i18n="Account">Pemilik Kotak Infaq</div>
             </a>
           </li>
           {{-- <li class="menu-item">

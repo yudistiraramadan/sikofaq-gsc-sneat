@@ -5,8 +5,22 @@
 <h3>Daftar User GSC</h3>
 <p><div class="badge bg-primary">3</div>&nbsp; Total User</p>
 
+<a href="{{ route('tambahuser') }}">
+    <button type="button" class="btn btn-success tambah mb-4 btn-sm">Tambah User</button>
+</a>
+&nbsp;
+<a href="#">
+    <button type="button" class="btn btn-primary mb-4 btn-sm">Export Excel</button>
+</a>
+&nbsp;
+<a href="#">
+    <button type="button" class="btn btn-danger mb-4 btn-sm">Export PDF
+        <i class="bi bi-printer-fill"></i>
+    </button>
+</a>
+
 <div class="table-responsive text-nowrap ">
-    <table class="table table-bordered table-hover" id="dt-user">
+    <table class="table table-hover" id="dt-user">
       <thead>
         <tr>
           <th>Nama</th>
