@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 // use datatables;
 use App\Models\User;
 use App\Models\DetailUser;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Hash;
@@ -53,6 +54,10 @@ class UserController extends Controller
         $detail_user->phone = $data['phone'];
         $detail_user->gender = $data['gender'];
         $detail_user->save();
+
+        // $role = new Role;
+        // $role->role_id = $data['role_id'];
+        // dd($role);
         // dd($detail_user);
 
         // if ($request->hasFile('photo')) {

@@ -120,7 +120,7 @@
           <div data-i18n="Account Settings">User</div>
         </a>
         <ul class="menu-sub">
-          <li class="menu-item">
+          <li class="menu-item {{ Request::is ('daftar-user') ? 'active' : '' }}">
             <a href="{{ route('user') }}" class="menu-link">
               <div data-i18n="Account">User Sistem</div>
             </a>

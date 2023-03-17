@@ -21,7 +21,7 @@
     </a>
 
     <div class="table-responsive text-nowrap ">
-        <table class="table table-hover" id="dt-user">
+        <table class="table table-hover table-responsive" id="dt-user">
             <thead>
                 <tr>
                     <th>Nama</th>

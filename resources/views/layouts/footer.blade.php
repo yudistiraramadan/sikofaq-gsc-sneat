@@ -1,30 +1,13 @@
-<footer class="content-footer footer bg-footer-theme">
-    <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-      <div class="mb-2 mb-md-0">
-        ©
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-        , made with ❤️ by
-        <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
-      </div>
-      <div>
-        <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-        <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+<div class="container">
+    <footer>
+        <div class="footer clearfix mb-0 text-muted">
+            <div class="float-start">
+                <p>2023 &copy; Gerak Sedekah Cilacap</p>
+            </div>
+            <div class="float-end">
+                <p>Created By <span class="text-danger"></span> <a href="https://www.instagram.com/yudistira8404/">Yudistira RK</a></p>
+            </div>
+        </div>
+    </footer>
+</div>
 
-        <a
-          href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-          target="_blank"
-          class="footer-link me-4"
-          >Documentation</a
-        >
-
-        <a
-          href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-          target="_blank"
-          class="footer-link me-4"
-          >Support</a
-        >
-      </div>
-    </div>
-  </footer>
