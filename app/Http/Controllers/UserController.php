@@ -11,28 +11,36 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function user(Request $request){
-        $user = User::join('detail_users', 'users.id', '=', 'detail_users.user_id', 'users')
-        ->join('roles', 'users.role_id', '=', 'roles.id')
-        ->get(['users.name', 'detail_users.address', 'detail_users.phone', 'roles.role_name']);
-        // $user = User::all();
-        // if ($request->ajax()) {
-        //     return datatables()->of($user);
-        // }
+    public function user(Request $request)
+    {
+        if ($request->ajax()) {
+            $user = User::join('detail_users', 'users.id', '=', 'detail_users.user_id', 'users')
+                ->join('roles', 'users.role_id', '=', 'roles.id')
+                ->get(['users.name', 'detail_users.address', 'detail_users.phone', 'roles.role_name']);
+            return datatables()->of($user)
 
-        // dd($user);
-        return view('user.daftar-user', compact('user'));
+                ->addColumn('action', function ($user) {
+                    $button = '<div class="dropdown"><button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button><div class="dropdown-menu"><a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>Edit</a><a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>Delete</a></div>';
+                    return $button;
+                })->rawColumns(['action'])->make(true);
+        }
+        return view('user.daftar-user');
+
+
+
     }
 
-    public function create(){
+    public function create()
+    {
         return view('user.tambah-user');
     }
 
-    public function insert(Request $request){
+    public function insert(Request $request)
+    {
         $data = $request->all();
 
         $user = new User;
-        $user->name =$data['name'];
+        $user->name = $data['name'];
         $user->email = $data['email'];
         $user->password = Hash::make($data['password']);
         $user->role_id = $data['role_id'];
@@ -52,7 +60,5 @@ class UserController extends Controller
         //     $detail_user->photo = $request->file('photo')->getClientOriginalName();
         // }
         return redirect()->route('user')->with('success', 'Data User Berhasil Ditambahkan');
-
-
     }
 }
