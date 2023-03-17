@@ -72,6 +72,11 @@
 {{-- @push('scripts') --}}
 <script>
     let table = new DataTable('#dt-user');
+    // $(document).ready(function() {
+    //     $('#dt-user').DataTable({
+
+    //     })
+    // })
 </script>
 {{-- @endpush --}}
 @endsection

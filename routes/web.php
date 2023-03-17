@@ -28,6 +28,8 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashb
 // Bendahara
 Route::get('/daftar-user', [UserController::class, 'user'])->name('user');
 Route::get('/tambah-user', [UserController::class, 'create'])->name('tambahuser');
+Route::post('/insert-user', [UserController::class, 'insert'])->name('insertuser');
+
 
 
 Route::get('/tes', function(){
